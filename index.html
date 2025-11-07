@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prueba de AFrame</title>
+	<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+	<a-scene 
+	id="mainScene"
+	background="color: #000">
+		<!-- Assets -->
+		<a-assets>
+			<a-asset-item 
+			id="edificioFinal"
+			src="modelos/edificio/ESCENA-FINAL VR.glb"></a-asset-item>
+
+			<a-asset-item
+			id="modeloPsj"
+			src="modelos/avatar/avatar.glb"></a-asset-item>
+			
+			<a-asset-item
+			id="modeloRobot"
+			src="modelos/avatar/roboto.glb"></a-asset-item>
+			
+			<audio
+			id="srcSnd"
+			src="audios/dgieVrProjectAudio1.mpeg"
+			preload="auto"></audio>
+
+			<!-- Iconos -->
+			<img
+			id="iconComenzar" 
+			src="imagenes/iconos/play.png"
+			alt="comenzar">
+
+			<img
+			id="iconPausa"
+			src="imagenes/iconos/stop.png"
+			alt="pausar">
+
+			<img
+			id="iconReiniciar"
+			src="imagenes/iconos/undo.png"
+			alt="reiniciar">
+
+			<!-- Imagenes de acompanhamiento -->
+			<img
+			id="acomIdea"
+			src="imagenes/acompanhamiento/idea.png"
+			alt="idea">
+
+			<img
+			id="acomEscena"
+			src="imagenes/acompanhamiento/escenario.png"
+			alt="Escena">
+
+			<img
+			id="acomInversionista"
+			src="imagenes/acompanhamiento/inversionista.png"
+			alt="Inversionista">
+
+			<img
+			id="acomSpeech"
+			src="imagenes/acompanhamiento/speech.png"
+			alt="Speech">
+
+			<img
+			id="acomTrailerPeli"
+			src="imagenes/acompanhamiento/trailerPeli.png"
+			alt="Trailer de pelicula">
+
+			<img
+			id="acomSElevador"
+			src="imagenes/acompanhamiento/elevador.png"
+			alt="Speech de elevador">
+
+			<img
+			id="acomSVenta"
+			src="imagenes/acompanhamiento/sNegocio.png"
+			alt="Speech de venta">
+
+			<img
+			id="acomSDeck"
+			src="imagenes/acompanhamiento/deckSpeech.png"
+			alt="Speech deck">
+
+			<img
+			id="acomTv"
+			src="imagenes/acompanhamiento/tv.png"
+			alt="tv">
+
+			<img
+			id="acomHistoria"
+			src="imagenes/acompanhamiento/historia.png"
+			alt="Contar historia">
+
+			<img
+			id="acomLenCorpo"
+			src="imagenes/acompanhamiento/lenCorporal.png"
+			alt="Lenguaje corporal">
+
+			<img
+			id="acomPractica"
+			src="imagenes/acompanhamiento/practica.png"
+			alt="Practica practica practica">
+		</a-assets>
+
+		<!-- Entidades -->
+		<a-entity
+		camera="active: true; fov: 80"
+		camera look-controls 
+		position="0 1.6 -2">
+			<a-cursor
+			fuse="true"
+			fuse-timeout="2000"
+			color="black"></a-cursor>
+		</a-entity>
+
+		<a-entity
+		id="edificio"
+		gltf-model="#edificioFinal"
+		position="0 0 -16"></a-entity>
+
+		<a-entity
+		id="personaje"
+		gltf-model="#modeloPsj"
+		position="-1.7 .18 -3.8"
+		rotation="0 35 0"
+		visible="false"
+		scale="1.6 1.6 1.6">
+			<a-entity
+			id="voz"
+			sound="src: #srcSnd; volume: 6"></a-entity>
+		</a-entity>
+		
+		<a-entity
+		id="robot"
+		gltf-model="#modeloRobot"
+		position="1.1 .5 -4.3"
+		rotation="10 335 0"
+		visible="false"
+		scale="1.6 1.6 1.6"></a-entity>
+
+		<!-- Iconos de control de experiencia -->
+		<a-image
+		id="strtExp"
+		src="#iconComenzar"
+		position="0  2.35 -4.5">
+			<a-text
+			value="Comenzar"
+			position="-.2 -.55 0"
+			width="2"
+			color="white"></a-text>
+		</a-image>
+		<!-- Pausa -->
+		<a-image
+		visible="false"
+		id="pauseExp"
+		src="#iconPausa"
+		width=".5"
+		height=".5"
+		position="1.2 2.2 -3"
+		rotation="0 330 0">
+			<a-text
+			value="Pausar"
+			position="-.15 -.3 0"
+			width="2"
+			color="white"></a-text>
+		</a-image>
+		<!-- Continuar -->
+		<a-image
+		visible="false"
+		id="continuarExp"
+		src="#iconComenzar"
+		width=".5"
+		height=".5"
+		position="1.2 1.6 -3"
+		rotation="0 330 0">
+			<a-text
+			value="Reanudar"
+			position="-.2 -.3 0"
+			width="2"
+			color="white"></a-text>
+		</a-image>
+		<!-- Reiniciar -->
+		<a-image
+		visible="false"
+		id="reiniciarExp"
+		src="#iconReiniciar"
+		width=".5"
+		height=".5"
+		position="1.2 1 -3"
+		rotation="0 330 0">
+			<a-text
+			value="Reiniciar"
+			position="-.2 -.3 0"
+			width="2"
+			color="white"></a-text>
+		</a-image>
+
+		<!-- Imagenes de acompanhamiento -->
+		<a-image
+		visible="false"
+		id="imgIdea"
+		src="#acomIdea"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgEscenario"
+		src="#acomEscena"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgInver"
+		src="#acomInversionista"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgSpeech"
+		src="#acomSpeech"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgTrailerPeli"
+		src="#acomTrailerPeli"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgSElevador"
+		src="#acomSElevador"
+		position="0  1.1 -4.35"
+		scale=".8 .8 .8">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgVenta"
+		src="#acomSVenta"
+		position="0 1.1 -4.35"
+		rotate="0 0 0">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgDeck"
+		src="#acomSDeck"
+		position="0 1.1 -4.35"
+		rotate="0 0 0">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgTv"
+		src="#acomTv"
+		position="0 1.1 -4.35">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgHistoria"
+		src="#acomHistoria"
+		position="0 1.1 -4.35">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgLenCorpo"
+		src="#acomLenCorpo"
+		position="0 1.1 -4.35">
+		</a-image>
+
+		<a-image
+		visible="false"
+		id="imgPractica"
+		src="#acomPractica"
+		position="0 1.1 -4.35">
+		</a-image>
+	</a-scene>
+
+	<script src="script.js"></script>
+
+	<!-- Atribuciones por iconos e imagenes -->
+	<!-- 
+	<a href="https://www.freepik.com/icon/undo_3718636">Icon by HAJICON</a>
+
+	<a href="https://www.freepik.com/icon/play_10165147">Icon by Techno Icons</a>
+
+	<a href="https://www.freepik.com/icon/stop_10165208">Icon by Techno Icons</a>
+
+	<a href="https://www.freepik.com/icon/idea_1077148">Icon by Freepik</a>
+
+	<a href="https://www.freepik.com/icon/stage_1249348#fromView=search&page=1&position=9&uuid=d71cd9ec-3942-4e2f-9407-2ac2626dcc2c">Icon by smalllikeart</a>
+
+	<a href="https://www.freepik.com/icon/finance_17641138#fromView=search&page=1&position=22&uuid=eb7866d4-9d31-43ce-88a0-2824125ab838">Icon by wuizo</a>
+
+	<a href="https://www.freepik.com/icon/conference_329188#fromView=search&page=1&position=13&uuid=1879e66f-7465-4535-b419-fb7a155b1662">Icon by Freepik</a>
+
+	<a href="https://www.freepik.com/icon/film-reel_3172555#fromView=search&page=1&position=42&uuid=62308f57-ce41-479e-bdf8-b7de858d9f7c">Icon by Freepik</a>
+	-->
+</body>
+</html>

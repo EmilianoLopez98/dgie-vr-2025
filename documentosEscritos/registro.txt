@@ -1,0 +1,103 @@
+15-10-25
+-Se agregó el modelo guía pero falta trabajar cómo utilizar animaciones
+-Se creo cuenta de Google para el proyecto para poder actualizar el teléfono celular
+-Se actualizo el celular
+
+17-10-25
+-Se creo la carpeta audios y se agregó el audio "WhatsApp Audio 2025-10-15 at 9.33.57 PM",
+cambiando su nombre a "dgieVrProjectAudio1"
+-Se agregó al código el audio y componentes necesarios para su uso
+-Se cargo el nuevo archivo para hacer pruebas de funcionamiento
+-Se cambio valor de propiedad de autoplay de "on" a "true", se actualizará para comprobar
+funcionamiento, aun pendiente
+-Se borro el modelo estatua, se agrego el escenario
+-Se reinicio el proyecto para ver si aún hace mucho movimiento la cámara en dispositivos no iOs
+
+20-10-25
+-Se eliminó escenario "BURDO-LENINVR"
+-Se agregó "ESCENA-FINAL VR"
+-Se intentó creación de redes sociales, pero FB complico
+el registro, incluso se realizó apelación (No sé por qué 
+era necesario, en fin).
+-Se elimino "estatua" del directorio "modelos"
+-Se elimino "testingModels" del directorio "modelos"
+-Se creo un directorio donde se realizan practicas y experimentos para no afectar el proyecto
+principal
+-Se elimino directorio de practicas para evitar conflicto con proyecto
+principal (xd)
+
+22-10-25
+-Se crearon las redes sociales del proyecto.
+-Facebook: https://www.facebook.com/profile.php?id=61582768407572
+-Instragram: https://www.instagram.com/dgievrproject/
+-Se empezó a practicar cómo ejecutar las animaciones del modelo 3D por medio de A-Frame,
+nombre de la animación del modeloPrueba: "FOCO"
+
+nota: En el correo las cosas relacionadas a las redes sociales tienen su propia pestaña, por lo que si llegan a necesitar un código para acceder o algo relacionado a una red social hay que revisar esa pestaña; pensé que no me dejaría crear Instagram así como Facebook, pero sí me llegaban los códigos para crear la cuenta, pero al estar en esa sección y no en "principal" creí que no me dejaría.
+
+24-10-25
+-Se logró aplicar animaciones, aún quedan pendientes la de hablar
+-Queda pendiente el audio, pues los navegadores no permiten ejecutarlo sin permiso (con una acción/ input) del usuario
+-Infografía en Canva del proyecto para impresión
+-Al final se resolvió lo del audio, ya es posible utilizarlo mediante un input que no requiere de controles/ mandos
+
+27-10-25
+-Se agregó nuevo avatar
+-En progreso reproducir varias animaciones al mismo tiempo
+
+29-10-25
+-Agregado a pendientes poner animaciones / notas tipo PowerPoint
+-Agregado a pendientes animar un poco más el avatar con A-Frame directamente
+-Comencé a practicar three.js, que es lo que utiliza A-Frame tras bambalinas, pues algunas cosas necesitaban que modificara el código de Three.js, y necesito aprenderlo
+-Solo se subirá a drive la carpeta pero no se hará push del código, pues no han habido avances con los pendientes
+
+31-10-25
+-Se modifico avatar
+-Se separaron modelos de avatar y robot
+-Se agrego funcionalidad de pausa y continuación
+-Se renovaron animaciones de robot y personaje
+-Robot pendiente de agregar
+
+01-11-25
+-Se agregó función para detener animación "hablar" del avatar una vez que el audio termina
+-Se agregó un loop para hacer uso de un reloj, y con este poder aplicar acciones a las animaciones del personaje y otras funciones como esconder boton de pausa (aún no aplicado) y un botón de reiniciar (botón aún no agregado)
+*Se agregó una carpeta donde esta el script2.js y también otro donde ya se reemplaza el código del script.js, eliminando el script2.js donde se hicieron los experimentos para la mejora del código
+
+05-11-25
+-Se agregaron iconos para comenzar, pausar, reanudar y reiniciar experiencia. Fueron obtenidos de la siguiente página:
+https://www.freepik.es/
+-Se agregó modelo de robot para acompañar avatar
+-Se mejoro estructura del código en script.js
+-notas de audio para agregar detalles a la experiencia
+a)Idea
+b)Escenario
+c)Inversionistas, clientes
+d)speech
+e)trailer de pelicula
+f)speech de elevador
+g)speech de venta
+h)tv
+i)Contar historia
+j)Lenguaje corporal
+k)practica, practica, practica
+
+07-11-25
+-Se agregaron imágenes con animación para acompañar audio
+-Se crearon funciones para controlar visibilidad de las imágenes
+-Notas de referencia para imágenes basadas en el avance el audio en contador del proyecto
+
+Nombre de la imagen------------------Tiempo en el que se debe activar (basado en contador de proyecto)
+a)Idea-------------------------------3
+b)Escenario--------------------------9
+c)Inversionistas, clientes-----------12
+d)speech-----------------------------18
+e)trailer de pelicula----------------29
+f)speech de elevador-----------------35
+g)speech de venta--------------------45
+h)speech deck------------------------58
+i)tv---------------------------------66
+j)Contar historia--------------------70
+k)Lenguaje corporal------------------80
+l)practica, practica, practica-------101
+
+-Se agregaron todas las imágenes y se probará proyecto en dispositivos que se usarán en el evento
