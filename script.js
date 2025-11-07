@@ -19,6 +19,20 @@ const imgTv = document.querySelector("#imgTv");
 const imgHistoria = document.querySelector("#imgHistoria");
 const imgLenCorpo = document.querySelector("#imgLenCorpo");
 const imgPractica = document.querySelector("#imgPractica");
+let imagenes = [
+    imgIdea,
+    imgEscenario,
+    imgInver,
+    imgSpeech,
+    imgTrailerPeli,
+    imgSElevador,
+    imgVenta,
+    imgDeck,
+    imgTv,
+    imgHistoria,
+    imgLenCorpo,
+    imgPractica
+]
 // Sonido
 const audio = document.querySelector("#voz");
 const srcSnd = document.querySelector("#srcSnd");    
@@ -230,50 +244,51 @@ let objetoPorTiempo = (tiempo) => {
             anim = "property: position; to: 0 1.1 -4.35; loop: false; dur: 1000; easing: easeInOutElastic";
             obj.setAttribute("animation", anim);
         }, 1000);
-        ocultarObjeto(obj);
+        ocultarObjeto(tiempo);
     };
 };
 
-let ocultarObjeto = (obj) => {
-    let tiempo = 2500;
-    if(obj == imgIdea) {
-        tiempo = 6000;
+let ocultarObjeto = (tiempo) => {
+    let obj = null;
+    if(tiempo == 9){
+        obj = imagenes[0];
     }
-    else if(obj == imgEscenario) {
-        tiempo = 3000;
+    else if(tiempo == 12){
+        obj = imagenes[1];
     }
-    else if(obj == imgInver) {
-        tiempo = 6000;
+    else if(tiempo == 18){
+        obj = imagenes[2];
     }
-    else if(obj == imgSpeech) {
-        tiempo = 11000;
+    else if(tiempo == 29){
+        obj = imagenes[3];
     }
-    else if(obj == imgTrailerPeli) {
-        tiempo = 6000;
+    else if(tiempo == 35){
+        obj = imagenes[4];
     }
-    else if(obj == imgSElevador) {
-        tiempo = 10000;
+    else if(tiempo == 45){
+        obj = imagenes[5];
     }
-    else if(obj == imgVenta) {
-        tiempo = 13000;
+    else if(tiempo == 58){
+        obj = imagenes[6];
     }
-    else if(obj == imgDeck) {
-        tiempo = 8000;
+    else if(tiempo == 66){
+        obj = imagenes[7];
     }
-    else if(obj == imgTv) {
-        tiempo = 4000;
+    else if(tiempo == 70){
+        obj = imagenes[8];
     }
-    else if(obj == imgHistoria) {
-        tiempo = 10000;
+    else if(tiempo == 80){
+        obj = imagenes[9];
     }
-    else if(obj == imgLenCorpo) {
-        tiempo = 21000;
+    else if(tiempo == 101){
+        obj = imagenes[10];
     }
-    else if(obj == imgPractica) {
-        tiempo = 18000;
+    else if(tiempo == 120){
+        obj = imagenes[11];
     };
-    setTimeout(() => {
+    
+    if(obj !== null) {
         obj.setAttribute('visible', 'false');
         obj.setAttribute('animation', 'enabled: false');
-    }, tiempo);
+    };
 };
