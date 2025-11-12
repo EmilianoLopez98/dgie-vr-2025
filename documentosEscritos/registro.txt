@@ -101,3 +101,8 @@ k)Lenguaje corporal------------------80
 l)practica, practica, practica-------101
 
 -Se agregaron todas las imágenes y se probará proyecto en dispositivos que se usarán en el evento
+
+12-11-25
+-Se subieron fotos del evento del 8 y 9 de Noviembre de 2025
+-Se investigaron diferentes proyectos de VR con mayor interactividad (como de un videojuego)
+-Se buscaron diferentes tutoriales en inglés y en español de three.js
